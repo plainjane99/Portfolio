@@ -1,0 +1,11 @@
+:root {
+    --primary_color: #E6E6FA; /*lavender*/
+    --secondary_color: #191970; /*midnight blue*/
+    --tertiary_color: #87CEEB; /*sky blue*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
