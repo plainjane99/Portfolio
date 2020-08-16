@@ -1,7 +1,8 @@
 :root {
     --background-color: #E6E6FA; /*lavender*/
     --text-color: #191970; /*midnight blue*/
-    --emphasis-color: #87CEEB; /*sky blue*/
+    --emphasis-color: #000000;
+    --project-color: #614a72;
     --heading-font-size: 32px;
 }
 
@@ -19,7 +20,7 @@ body {
 /* heading and navigation section start */
 
 header {
-    background-color: #000000;
+    background-color: var(--emphasis-color);
     padding: 20px 35px;
     display: flex;
     justify-content: space-between;
@@ -66,7 +67,7 @@ header nav ul li a {
 /* hero section start */
 
 .hero {
-    background-color: #614a72;
+    background-color: var(--project-color);
     height: 300px;
     display: flex;
     justify-content: flex-end;
@@ -78,7 +79,7 @@ header nav ul li a {
     justify-content: flex-end;
     overflow: hidden;
     position: relative;
-    left: -75px;
+    left: -50px;
 }
 
 .hero img {
@@ -113,7 +114,6 @@ header nav ul li a {
 .section-head {
     text-align: right;
     padding: 0px 50px 0px 50px;
-    width: 25%;
 }
 
 .section-head h2 {
@@ -123,14 +123,6 @@ header nav ul li a {
 /* common styling end */
 
 /* about me section start */
-
-/* .about-me {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    color: var(--text-color);
-    margin: 3.5%;
-} */
 
 .about-me-text {
     width: 70%;
@@ -144,14 +136,6 @@ header nav ul li a {
 
 /* my work section start */
 
-/* .my-work {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    color: var(--text-color);
-    margin: 3.5%;
-} */
-
 .my-work-wrapper {
     display: flex;
     width: 70%;
@@ -164,14 +148,32 @@ header nav ul li a {
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    color: var(--text-color);
-    font-size: 1.2rem;
+}
+
+.work-item {
+    padding: 0;
+    border: 3px solid var(--emphasis-color);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.work-item h3 {
+    font-size: 20px;
+    position: relative;
+    z-index: 9000;
+}
+
+.work-item p {
+    font-size: 16px;
+    position: relative;
+    z-index: 9000;
 }
 
 .work-item.run-buddy {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
-    border: 4px solid var(--emphasis-color);
 }
 
 .run-buddy {
@@ -179,36 +181,38 @@ header nav ul li a {
     min-height: 200px;
     background-size: cover;
     position: relative;
+    z-index: 8000;
+    opacity: 0.75;
 }
 
 .work-item.project-1 {
+    background-color: var(--project-color);
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
-    border: 4px solid var(--emphasis-color);
 }
 
 .work-item.project-2 {
+    background-color: var(--project-color);
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
-    border: 4px solid var(--emphasis-color);
 }
 
 .work-item.project-3 {
+    background-color: var(--project-color);
     grid-column: 3 / span 1;
     grid-row: 3 / span 1;
-    border: 4px solid var(--emphasis-color);
 }
 
 .work-item.something-cool {
+    background-color: var(--project-color);
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
-    border: 4px solid var(--emphasis-color);
 }
 
 .work-item.something-cooler {
+    background-color: var(--project-color);
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
-    border: 4px solid var(--emphasis-color);
 }
 
 /* my work section end */
