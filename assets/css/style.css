@@ -1,11 +1,188 @@
 :root {
-    --primary_color: #E6E6FA; /*lavender*/
-    --secondary_color: #191970; /*midnight blue*/
-    --tertiary_color: #87CEEB; /*sky blue*/
+    --background-color: #E6E6FA; /*lavender*/
+    --text-color: #191970; /*midnight blue*/
+    --emphasis-color: #87CEEB; /*sky blue*/
+    --header-only: #000000; /*change this to something nicer looking*/
+    --heading-font-size: 36px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+/* heading and navigation section start */
+
+header {
+    background-color: var(--header-only);
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* z-index: 9999; */
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+    background-color: var(--emphasis-color);
+    color: var(--header-only);
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 20px;
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+/* header and navigation section end */
+
+/* hero section start */
+
+.hero {
+    background-color: #614a72;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.hero-text {
+    width: 50%;
+    text-align: right;
+    margin: 3.5%;
+}
+
+.hero-text h2 {
+    font-style: italic;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+/* hero section end */
+
+/* about-me common styling start */
+
+.section-head {
+    text-align: right;
+    padding: 0px 50px 0px 50px;
+    width: 25%;
+}
+
+.section-head h2 {
+    font-size: var(--heading-font-size);
+}
+
+/* about-me common styling end */
+
+/* about me section start */
+
+.about-me {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 20px;
+    color: var(--text-color);
+    margin: 3.5%;
+}
+
+.about-me-text {
+    font-size: 18px;
+    /* width: 70%; */
+}
+
+/* about me section end */
+
+/* my work section start */
+
+.my-work {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 20px;
+    color: var(--text-color);
+    margin: 3.5%;
+}
+
+.my-work-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.my-work-container {
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.work-item.run-buddy {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    border: 4px solid var(--emphasis-color);
+}
+
+.work-item.project-1 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    border: 4px solid var(--emphasis-color);
+}
+
+.work-item.project-2 {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    border: 4px solid var(--emphasis-color);
+}
+
+.work-item.project-3 {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+    border: 4px solid var(--emphasis-color);
+}
+
+.work-item.something-cool {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    border: 4px solid var(--emphasis-color);
+}
+
+.work-item.something-cooler {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    border: 4px solid var(--emphasis-color);
 }
