@@ -244,3 +244,16 @@ header nav ul li a {
 }
 
 /* contact me section end */
+
+/* MEDIA QUERY FOR IPAD SCREENS AND SMALLER */
+@media screen and (max-width: 768px) {
+
+.section-head {
+    padding: 0px 20px;
+}
+    
+.contact-wrapper {
+    display: block;
+    justify-content: center;
+    padding: 0px 0px;
+}
