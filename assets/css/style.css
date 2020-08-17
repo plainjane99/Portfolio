@@ -148,6 +148,7 @@ header nav ul li a {
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    /* overflow: hidden; */
 }
 
 .work-item {
@@ -157,18 +158,33 @@ header nav ul li a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    min-height: 100px;
+}
+
+.work-item::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.my-work-container:hover .work-item::after {
+    opacity: 0;
 }
 
 .work-item h3 {
     font-size: 20px;
+    padding: 2px 2px 0 2px;
     position: relative;
-    z-index: 9000;
 }
 
 .work-item p {
     font-size: 16px;
     position: relative;
-    z-index: 9000;
 }
 
 .work-item.run-buddy {
@@ -178,17 +194,19 @@ header nav ul li a {
 
 .run-buddy {
     background-image: url("../images/Run_Buddy_Snip.png");
-    min-height: 200px;
     background-size: cover;
     position: relative;
-    z-index: 8000;
-    opacity: 0.75;
 }
 
 .work-item.project-1 {
-    background-color: var(--project-color);
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
+}
+
+.project-1 {
+    background-color: var(--project-color);
+    background-size: cover;
+    position: relative;
 }
 
 .work-item.project-2 {
@@ -197,10 +215,22 @@ header nav ul li a {
     grid-row: 3 / span 1;
 }
 
+.project-2 {
+    background-color: var(--project-color);
+    background-size: cover;
+    position: relative;
+}
+
 .work-item.project-3 {
     background-color: var(--project-color);
     grid-column: 3 / span 1;
     grid-row: 3 / span 1;
+}
+
+.project-3 {
+    background-color: var(--project-color);
+    background-size: cover;
+    position: relative;
 }
 
 .work-item.something-cool {
@@ -209,10 +239,22 @@ header nav ul li a {
     grid-row: 1 / span 1;
 }
 
+.something-cool {
+    background-color: var(--project-color);
+    background-size: cover;
+    position: relative;
+}
+
 .work-item.something-cooler {
     background-color: var(--project-color);
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
+}
+
+.something-cooler {
+    background-color: var(--project-color);
+    background-size: cover;
+    position: relative;
 }
 
 /* my work section end */
@@ -244,3 +286,135 @@ header nav ul li a {
 }
 
 /* contact me section end */
+
+/* MEDIA QUERY FOR IPAD SCREENS AND SMALLER */
+@media screen and (max-width: 768px) {
+
+    /* screen is large enough that majority of format still looks aesthetically pleasing */
+
+    .section-head {
+        padding: 0px 20px;
+    }
+        
+    .contact-wrapper {
+        display: block;
+        justify-content: center;
+        padding: 0px 0px;
+    }
+
+}
+
+/* MEDIA QUERY FOR IPHONE-X SCREENS AND SMALLER */
+@media screen and (max-width: 375px) {
+
+    /* arrange all formatting to be centered */
+
+    /* header and nav */
+
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding: 0 0 10px 0;
+    }
+
+    /* common style */
+    
+    .section {
+        display: block;
+        justify-content: center;
+        margin: 3.5%;
+    }
+    
+    .section-head {
+        text-align: center;
+        padding: 10px 0px 20px 0px;
+        text-decoration: underline;
+    }
+
+    /* about me */
+
+    .about-me-text {
+        width: 100%;
+    }
+
+    /* my work */
+    
+    .my-work-wrapper {
+        width: 100%;
+    }
+
+    .my-work-container {
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .work-item.run-buddy {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .work-item.project-1 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    
+    .work-item.project-2 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+    
+    .work-item.project-3 {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+    
+    .work-item.something-cool {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+    }
+    
+    .work-item.something-cooler {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+    
+    .run-buddy {
+        min-height: 200px;
+    }
+
+    /* contacts */
+
+    .contacts {
+        display: block;
+        justify-content: center;
+    }
+    
+    .contact-wrapper {
+        display: block;
+        justify-content: center;
+        padding: 0px 0px;
+    }
+
+}
