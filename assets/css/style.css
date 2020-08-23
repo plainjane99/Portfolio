@@ -154,30 +154,24 @@ header nav ul li a {
 .work-item {
     padding: 0;
     border: 3px solid var(--emphasis-color);
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     min-height: 100px;
 }
 
-.work-item::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: #ffffff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.5;
-}
-
-.my-work-container:hover .work-item::after {
-    opacity: 0;
+.work-item div {
+    width: 30%;
+    display: block;
+    background-color: var(--background-color);
+    color: black;
+    padding: 5px;
+    z-index: 9000;
 }
 
 .work-item h3 {
-    font-size: 20px;
+    font-size: 24px;
     padding: 2px 2px 0 2px;
     position: relative;
 }
@@ -196,6 +190,23 @@ header nav ul li a {
     background-image: url("../images/Run_Buddy_Snip.png");
     background-size: cover;
     position: relative;
+    opacity: 1;
+}
+
+.run-buddy::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.run-buddy:hover::after {
+    opacity: 0;
 }
 
 .work-item.project-1 {
@@ -207,6 +218,23 @@ header nav ul li a {
     background-color: var(--project-color);
     background-size: cover;
     position: relative;
+    opacity: 1;
+}
+
+.project-1::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.project-1:hover::after {
+    opacity: 0;
 }
 
 .work-item.project-2 {
@@ -219,6 +247,23 @@ header nav ul li a {
     background-color: var(--project-color);
     background-size: cover;
     position: relative;
+    opacity: 1;
+}
+
+.project-2::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.project-2:hover::after {
+    opacity: 0;
 }
 
 .work-item.project-3 {
@@ -231,6 +276,23 @@ header nav ul li a {
     background-color: var(--project-color);
     background-size: cover;
     position: relative;
+    opacity: 1;
+}
+
+.project-3::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.project-3:hover::after {
+    opacity: 0;
 }
 
 .work-item.something-cool {
@@ -243,6 +305,23 @@ header nav ul li a {
     background-color: var(--project-color);
     background-size: cover;
     position: relative;
+    opacity: 1;
+}
+
+.something-cool::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.something-cool:hover::after {
+    opacity: 0;
 }
 
 .work-item.something-cooler {
@@ -255,6 +334,23 @@ header nav ul li a {
     background-color: var(--project-color);
     background-size: cover;
     position: relative;
+    opacity: 1;
+}
+
+.something-cooler:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.something-cooler:hover::after {
+    opacity: 0;
 }
 
 /* my work section end */
