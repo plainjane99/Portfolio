@@ -148,49 +148,45 @@ header nav ul li a {
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    /* overflow: hidden; */
 }
 
 .work-item {
-    padding: 0;
+    background-size: cover;
+    position: relative;
     border: 3px solid var(--emphasis-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    min-height: 100px;
 }
 
-.work-item div {
-    width: 30%;
-    display: block;
-    background-color: var(--background-color);
-    color: black;
+.work-item-title {
     padding: 5px;
+    border: 3px solid var(--emphasis-color);
+    background-color: white;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     z-index: 9000;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 .work-item h3 {
-    font-size: 24px;
-    padding: 2px 2px 0 2px;
-    position: relative;
+    font-size: 22px;
 }
 
 .work-item p {
     font-size: 16px;
-    position: relative;
-}
-
-.work-item.run-buddy {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
 }
 
 .run-buddy {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
     background-image: url("../images/Run_Buddy_Snip.png");
-    background-size: cover;
-    position: relative;
-    opacity: 1;
+    min-height: 300px;
 }
 
 .run-buddy::after {
@@ -209,16 +205,11 @@ header nav ul li a {
     opacity: 0;
 }
 
-.work-item.project-1 {
+.project-1 {
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
-}
-
-.project-1 {
     background-color: var(--project-color);
     background-size: cover;
-    position: relative;
-    opacity: 1;
 }
 
 .project-1::after {
@@ -237,17 +228,11 @@ header nav ul li a {
     opacity: 0;
 }
 
-.work-item.project-2 {
-    background-color: var(--project-color);
+.project-2 {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
-}
-
-.project-2 {
     background-color: var(--project-color);
     background-size: cover;
-    position: relative;
-    opacity: 1;
 }
 
 .project-2::after {
@@ -266,17 +251,11 @@ header nav ul li a {
     opacity: 0;
 }
 
-.work-item.project-3 {
-    background-color: var(--project-color);
+.project-3 {
     grid-column: 3 / span 1;
     grid-row: 3 / span 1;
-}
-
-.project-3 {
     background-color: var(--project-color);
     background-size: cover;
-    position: relative;
-    opacity: 1;
 }
 
 .project-3::after {
@@ -295,17 +274,11 @@ header nav ul li a {
     opacity: 0;
 }
 
-.work-item.something-cool {
-    background-color: var(--project-color);
+.something-cool {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
-}
-
-.something-cool {
     background-color: var(--project-color);
     background-size: cover;
-    position: relative;
-    opacity: 1;
 }
 
 .something-cool::after {
@@ -324,17 +297,11 @@ header nav ul li a {
     opacity: 0;
 }
 
-.work-item.something-cooler {
-    background-color: var(--project-color);
+.something-cooler {
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
-}
-
-.something-cooler {
     background-color: var(--project-color);
     background-size: cover;
-    position: relative;
-    opacity: 1;
 }
 
 .something-cooler:after {
@@ -466,40 +433,37 @@ header nav ul li a {
         grid-template-rows: repeat(6, 1fr);
     }
 
-    .work-item.run-buddy {
+    .run-buddy {
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
+        min-height: 200px;
     }
 
-    .work-item.project-1 {
+    .project-1 {
         grid-column: 1 / span 1;
         grid-row: 2 / span 1;
     }
     
-    .work-item.project-2 {
+    .project-2 {
         grid-column: 1 / span 1;
         grid-row: 3 / span 1;
     }
     
-    .work-item.project-3 {
+    .project-3 {
         grid-column: 1 / span 1;
         grid-row: 4 / span 1;
     }
     
-    .work-item.something-cool {
+    .something-cool {
         grid-column: 1 / span 1;
         grid-row: 5 / span 1;
     }
     
-    .work-item.something-cooler {
+    .something-cooler {
         grid-column: 1 / span 1;
         grid-row: 6 / span 1;
     }
     
-    .run-buddy {
-        min-height: 200px;
-    }
-
     /* contacts */
 
     .contacts {
