@@ -182,14 +182,13 @@ a:link {
     font-size: 16px;
 }
 
-.run-buddy {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+.something-coolest {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
     background-image: url("../images/Run_Buddy_Snip.png");
-    min-height: 300px;
 }
 
-.run-buddy::after {
+.something-coolest::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -201,15 +200,15 @@ a:link {
     z-index: 8000;
 }
 
-.run-buddy:hover::after {
+.something-coolest:hover::after {
     opacity: 0;
 }
 
 .project-1 {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-    background-color: var(--project-color);
-    background-size: cover;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    background-image: url("../images/City_Explorer_Snip.png");
+    min-height: 300px;
 }
 
 .project-1::after {
@@ -277,8 +276,7 @@ a:link {
 .something-cool {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
-    background-color: var(--project-color);
-    background-size: cover;
+    background-image: url("../images/Weather_Dashboard_Populated.png");
 }
 
 .something-cool::after {
@@ -300,8 +298,7 @@ a:link {
 .something-cooler {
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
-    background-color: var(--project-color);
-    background-size: cover;
+    background-image: url("../images/Work_Day_Scheduler_Snip.png");
 }
 
 .something-cooler:after {
@@ -351,29 +348,64 @@ a:link {
 /* contact me section end */
 
 /* MEDIA QUERY FOR IPAD SCREENS AND SMALLER */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 
     /* screen is large enough that majority of format still looks aesthetically pleasing */
 
     .section-head {
         padding: 0px 20px;
     }
+
+    .my-work-container {
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .something-coolest {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        /* min-height: 200px; */
+    }
+
+    .project-1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+    
+    .project-2 {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+    }
+    
+    .project-3 {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+    
+    .something-cool {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+    
+    .something-cooler {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
         
     .contact-wrapper {
         display: block;
-        justify-content: center;
-        padding: 0px 0px;
+        text-align: center;
     }
 
 }
 
 /* MEDIA QUERY FOR IPHONE-X SCREENS AND SMALLER */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
 
     /* arrange all formatting to be centered */
 
-    /* header and nav */
-
+    /* header and nav start */
     header {
         padding-bottom: 0;
         justify-content: center;
@@ -386,7 +418,7 @@ a:link {
     }
 
     header nav ul {
-        margin-top: 20px;
+        margin-top: 10px;
         width: 100%;
         justify-content: center;
     }
@@ -395,10 +427,26 @@ a:link {
         font-size: 20px;
         padding: 15px;
     }
+    /* header and nav end */
+
+    /* hero start */
+    .hero {
+        justify-content: center;
+    }
+
+    .welcome {
+        left: 0;
+        display: flex;
+        align-items: center;
+    }
 
     .hero-text {
         text-align: center;
-        padding: 0 0 10px 0;
+        padding: 0 20px 0 0;
+    }
+
+    .hero img {
+        padding: 0 0 0 20px;
     }
 
     /* common style */
@@ -433,37 +481,37 @@ a:link {
         grid-template-rows: repeat(6, 1fr);
     }
 
-    .run-buddy {
+    .something-coolest {
         grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-        min-height: 200px;
+        grid-row: 2 / span 1;
+        /* min-height: 200px; */
     }
 
     .project-1 {
         grid-column: 1 / span 1;
-        grid-row: 2 / span 1;
+        grid-row: 1 / span 1;
     }
     
     .project-2 {
         grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
+        grid-row: 5 / span 1;
     }
     
     .project-3 {
         grid-column: 1 / span 1;
-        grid-row: 4 / span 1;
+        grid-row: 6 / span 1;
     }
     
     .something-cool {
         grid-column: 1 / span 1;
-        grid-row: 5 / span 1;
+        grid-row: 3 / span 1;
     }
     
     .something-cooler {
         grid-column: 1 / span 1;
-        grid-row: 6 / span 1;
+        grid-row: 4 / span 1;
     }
-    
+
     /* contacts */
 
     .contacts {
@@ -472,6 +520,7 @@ a:link {
     }
     
     .contact-wrapper {
+        width: 100%;
         display: block;
         justify-content: center;
         padding: 0px 0px;
