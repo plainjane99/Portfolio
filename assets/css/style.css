@@ -148,20 +148,47 @@ header nav ul li a {
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    /* overflow: hidden; */
 }
 
 .work-item {
-    padding: 0;
+    background-size: cover;
+    position: relative;
     border: 3px solid var(--emphasis-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-item-title {
+    padding: 5px;
+    border: 3px solid var(--emphasis-color);
+    background-color: white;
     display: block;
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100px;
+    z-index: 9000;
 }
 
-.work-item::after {
+a:link {
+    text-decoration: none;
+}
+
+.work-item h3 {
+    font-size: 22px;
+}
+
+.work-item p {
+    font-size: 16px;
+}
+
+.something-coolest {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    background-image: url("../images/Run_Buddy_Snip.png");
+}
+
+.something-coolest::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -170,91 +197,124 @@ header nav ul li a {
     top: 0;
     left: 0;
     opacity: 0.5;
+    z-index: 8000;
 }
 
-.my-work-container:hover .work-item::after {
+.something-coolest:hover::after {
     opacity: 0;
 }
 
-.work-item h3 {
-    font-size: 20px;
-    padding: 2px 2px 0 2px;
-    position: relative;
-}
-
-.work-item p {
-    font-size: 16px;
-    position: relative;
-}
-
-.work-item.run-buddy {
+.project-1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+    background-image: url("../images/City_Explorer_Snip.png");
+    min-height: 300px;
 }
 
-.run-buddy {
-    background-image: url("../images/Run_Buddy_Snip.png");
-    background-size: cover;
-    position: relative;
+.project-1::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
 }
 
-.work-item.project-1 {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-}
-
-.project-1 {
-    background-color: var(--project-color);
-    background-size: cover;
-    position: relative;
-}
-
-.work-item.project-2 {
-    background-color: var(--project-color);
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
+.project-1:hover::after {
+    opacity: 0;
 }
 
 .project-2 {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
     background-color: var(--project-color);
     background-size: cover;
-    position: relative;
 }
 
-.work-item.project-3 {
-    background-color: var(--project-color);
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
+.project-2::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.project-2:hover::after {
+    opacity: 0;
 }
 
 .project-3 {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
     background-color: var(--project-color);
     background-size: cover;
-    position: relative;
 }
 
-.work-item.something-cool {
-    background-color: var(--project-color);
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
+.project-3::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.project-3:hover::after {
+    opacity: 0;
 }
 
 .something-cool {
-    background-color: var(--project-color);
-    background-size: cover;
-    position: relative;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    background-image: url("../images/Weather_Dashboard_Populated.png");
 }
 
-.work-item.something-cooler {
-    background-color: var(--project-color);
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
+.something-cool::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.something-cool:hover::after {
+    opacity: 0;
 }
 
 .something-cooler {
-    background-color: var(--project-color);
-    background-size: cover;
-    position: relative;
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    background-image: url("../images/Work_Day_Scheduler_Snip.png");
+}
+
+.something-cooler:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 8000;
+}
+
+.something-cooler:hover::after {
+    opacity: 0;
 }
 
 /* my work section end */
@@ -288,29 +348,64 @@ header nav ul li a {
 /* contact me section end */
 
 /* MEDIA QUERY FOR IPAD SCREENS AND SMALLER */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 
     /* screen is large enough that majority of format still looks aesthetically pleasing */
 
     .section-head {
         padding: 0px 20px;
     }
+
+    .my-work-container {
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .something-coolest {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        /* min-height: 200px; */
+    }
+
+    .project-1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+    
+    .project-2 {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+    }
+    
+    .project-3 {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+    
+    .something-cool {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+    
+    .something-cooler {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
         
     .contact-wrapper {
         display: block;
-        justify-content: center;
-        padding: 0px 0px;
+        text-align: center;
     }
 
 }
 
 /* MEDIA QUERY FOR IPHONE-X SCREENS AND SMALLER */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
 
     /* arrange all formatting to be centered */
 
-    /* header and nav */
-
+    /* header and nav start */
     header {
         padding-bottom: 0;
         justify-content: center;
@@ -323,7 +418,7 @@ header nav ul li a {
     }
 
     header nav ul {
-        margin-top: 20px;
+        margin-top: 10px;
         width: 100%;
         justify-content: center;
     }
@@ -332,10 +427,26 @@ header nav ul li a {
         font-size: 20px;
         padding: 15px;
     }
+    /* header and nav end */
+
+    /* hero start */
+    .hero {
+        justify-content: center;
+    }
+
+    .welcome {
+        left: 0;
+        display: flex;
+        align-items: center;
+    }
 
     .hero-text {
         text-align: center;
-        padding: 0 0 10px 0;
+        padding: 0 20px 0 0;
+    }
+
+    .hero img {
+        padding: 0 0 0 20px;
     }
 
     /* common style */
@@ -370,38 +481,35 @@ header nav ul li a {
         grid-template-rows: repeat(6, 1fr);
     }
 
-    .work-item.run-buddy {
+    .something-coolest {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        /* min-height: 200px; */
+    }
+
+    .project-1 {
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
     }
-
-    .work-item.project-1 {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 1;
-    }
     
-    .work-item.project-2 {
-        grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
-    }
-    
-    .work-item.project-3 {
-        grid-column: 1 / span 1;
-        grid-row: 4 / span 1;
-    }
-    
-    .work-item.something-cool {
+    .project-2 {
         grid-column: 1 / span 1;
         grid-row: 5 / span 1;
     }
     
-    .work-item.something-cooler {
+    .project-3 {
         grid-column: 1 / span 1;
         grid-row: 6 / span 1;
     }
     
-    .run-buddy {
-        min-height: 200px;
+    .something-cool {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+    
+    .something-cooler {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
     }
 
     /* contacts */
@@ -412,6 +520,7 @@ header nav ul li a {
     }
     
     .contact-wrapper {
+        width: 100%;
         display: block;
         justify-content: center;
         padding: 0px 0px;
