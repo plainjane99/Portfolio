@@ -231,7 +231,6 @@ a:link {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
     background-image: url("../images/City_Explorer_Snip.png");
-    background-size: cover;
 }
 
 .project-2::after {
